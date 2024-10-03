@@ -30,13 +30,13 @@ const Questions: FC<QuestionsProp> = ({ data }) => {
                 <Button
                   key={key}
                   onClick={() => handleAnswer(question.id, key)}
-                  className={`w-full justify-start ${
+                  className={`w-full justify-center ${
                     answers[question.id]?.[0] === key
                       ? "bg-white text-black border border-gray-300"
                       : "bg-primary-red text-white"
                   }`}
                 >
-                  {String(value)}
+                  {value}
                 </Button>
               ))}
           </div>
