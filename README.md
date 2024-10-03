@@ -9,6 +9,8 @@ A simple quiz app displays a list of questions fetched from a REST API and allow
 
 ## Demo Webapp Link with mock data
 
+https://demo-quizapp.netlify.app/
+
 ## Project Screen Shot(s)
 
 ![Quiz App](https://i.imgur.com/8ZsyCle.png)

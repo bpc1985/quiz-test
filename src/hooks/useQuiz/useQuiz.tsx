@@ -43,7 +43,7 @@ export const useSubmitQuiz = () => {
 
 export const useGetQuizResult = (
   quizId: string | null
-): UseQueryResult<IQuizResult, Error> => {
+): UseQueryResult<IQuizResult | null, Error> => {
   const res = useQuery({
     queryKey: ["useGetQuizResult", quizId],
     queryFn: async () => {
