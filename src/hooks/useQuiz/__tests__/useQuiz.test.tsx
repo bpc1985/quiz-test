@@ -33,8 +33,6 @@ describe("useGetRandomQuiz", () => {
 
   it("should return quiz data when API call is successful", async () => {
     const mockQuizData = { quizId: "123", quizName: "Sample Quiz" };
-    // eslint-disable-next-line
-    // @ts-ignore
     vi.mocked(fetchQuiz).mockResolvedValue(mockQuizData);
 
     const { result } = renderHook(() => useGetRandomQuiz("test-theme-id"), {
@@ -59,8 +57,6 @@ describe("useGetQuizResult", () => {
 
   it("should return quiz result when API call is successful", async () => {
     const mockQuizResult = { score: 85, correctAnswers: 10 };
-    // eslint-disable-next-line
-    // @ts-ignore
     vi.mocked(fetchQuizResult).mockResolvedValue(mockQuizResult);
 
     const { result } = renderHook(() => useGetQuizResult("test-quiz-id"), {
@@ -99,8 +95,6 @@ describe("useSubmitQuiz", () => {
   });
 
   it("should submit the quiz and navigate to result page on success", async () => {
-    // eslint-disable-next-line
-    // @ts-ignore
     vi.mocked(submitQuiz).mockResolvedValue({});
     const { result } = renderHook(() => useSubmitQuiz(), { wrapper });
 
